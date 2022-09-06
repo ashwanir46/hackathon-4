@@ -64,5 +64,12 @@ public class TicketDataImpl {
     }
 
     // Sort the data as per the distance travelled by a bus in descending order.
+    public List<TicketData> getAllDataSortedInDescendingOrder(List<TicketData> ticketDataList) {
+        ticketDataList.sort(((o1, o2) -> (int) (o2.getTravelled_KM() - o1.getTravelled_KM())));
+        return ticketDataList;
+    }
+
+    //total collection
+
 
 }
