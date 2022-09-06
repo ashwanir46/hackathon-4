@@ -105,6 +105,22 @@ public class Hello {
         this.travelled_KM = travelled_KM;
     }
 
+    @Override
+    public String toString() {
+        return "Hello{" +
+                "schedule_no='" + schedule_no + '\'' +
+                ", route_no='" + route_no + '\'' +
+                ", ticket_from_stop_id=" + ticket_from_stop_id +
+                ", ticket_from_stop_seq_no=" + ticket_from_stop_seq_no +
+                ", ticket_till_stop_id=" + ticket_till_stop_id +
+                ", ticket_till_stop_seq_no=" + ticket_till_stop_seq_no +
+                ", ticket_date='" + ticket_date + '\'' +
+                ", ticket_time='" + ticket_time + '\'' +
+                ", total_ticket_amount=" + total_ticket_amount +
+                ", travelled_KM=" + travelled_KM +
+                '}';
+    }
+
     public static void main(String[] args) {
 
         System.out.println("Hello");
