@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TicketDataImpl {
@@ -70,6 +71,17 @@ public class TicketDataImpl {
     }
 
     //total collection
-
+    public int getTotalTicketAmount(List<TicketData> ticketDataList) {
+        TicketTotalAmount ticketTotalAmount = ticketDataList1 -> {
+            int totalAmount = 0;
+            Iterator<TicketData> ticketDataIterator = ticketDataList.iterator();
+            while (ticketDataIterator.hasNext()) {
+                TicketData element = ticketDataIterator.next();
+                totalAmount = totalAmount + element.getTotal_ticket_amount();
+            }
+            return totalAmount;
+        };
+        return ticketTotalAmount.getTotalTicketAmount(ticketDataList);
+    }
 
 }
