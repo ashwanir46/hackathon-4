@@ -1,6 +1,6 @@
 package com.jap.ticketing;
 
-public class Hello {
+public class TicketData {
     private String schedule_no;
     private String route_no;
     private int ticket_from_stop_id;
@@ -12,7 +12,7 @@ public class Hello {
     private int total_ticket_amount;
     private double travelled_KM;
 
-    public Hello(String schedule_no, String route_no, int ticket_from_stop_id, int ticket_from_stop_seq_no, int ticket_till_stop_id, int ticket_till_stop_seq_no, String ticket_date, String ticket_time, int total_ticket_amount, double travelled_KM) {
+    public TicketData(String schedule_no, String route_no, int ticket_from_stop_id, int ticket_from_stop_seq_no, int ticket_till_stop_id, int ticket_till_stop_seq_no, String ticket_date, String ticket_time, int total_ticket_amount, double travelled_KM) {
         this.schedule_no = schedule_no;
         this.route_no = route_no;
         this.ticket_from_stop_id = ticket_from_stop_id;
@@ -121,8 +121,4 @@ public class Hello {
                 '}';
     }
 
-    public static void main(String[] args) {
-
-        System.out.println("Hello");
-    }
 }
